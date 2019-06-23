@@ -1,10 +1,15 @@
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        int age = getRandom(107, 0);
+
+        int temp = getRandom(50, -20);
+
         String name = "Рома";
-        int age = 25;
-        byte temp = 25;
+
 
         if (age > 20 && age < 45) {
 
@@ -29,7 +34,12 @@ public class Main {
 
 
     }
-
+    public static int getRandom(int max, int min) {
+        Random a = new Random();
+        int randomAge = a.nextInt(max) - min;
+        System.out.println("Случайный возраст" + " - " + randomAge);
+        return randomAge;
+    }
 
 }
 
