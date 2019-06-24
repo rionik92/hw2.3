@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int age = getRandom(107, 0);
+        int age = generateRandomAge(107, 0);
 
-        int temp = getRandom(50, -20);
+        int temp = generateRandomTemp(50, -20);
 
         String name = "Рома";
 
@@ -34,11 +34,18 @@ public class Main {
 
 
     }
-    public static int getRandom(int max, int min) {
+
+    public static int generateRandomAge(int max, int min) {
         Random a = new Random();
         int randomAge = a.nextInt(max) - min;
         System.out.println("Случайный возраст" + " - " + randomAge);
         return randomAge;
+    }
+    public static int generateRandomTemp(int max, int min) {
+        Random a = new Random();
+        int randomTemp = a.nextInt(max) - min;
+        System.out.println("Случайная температура" + " - " + randomTemp);
+        return randomTemp;
     }
 
 }
